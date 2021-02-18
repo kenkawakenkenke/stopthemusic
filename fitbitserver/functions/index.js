@@ -1,8 +1,8 @@
-import functions from "firebase-functions";
-import admin from "firebase-admin";
+import * as functions from "firebase-functions";
+import admin, { storage } from "firebase-admin";
 import handleFitbitAsleep from "../src/messenger/messenger.js";
 
-exports.fitbitAsleep = functions
+export const fitbitAsleep = functions
     .region('asia-northeast1')
     .https
     .onRequest(
